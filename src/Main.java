@@ -1,5 +1,8 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
+        /*
         // DO NOW: Here are some objects
         Animal animal = new Animal("some animal");
         Cow cow = new Cow("Mr. Moo Cow");
@@ -26,21 +29,29 @@ public class Main {
         // (name it whatever you want); you will need to import ArrayList.
         // then add the four objects from the Do Now (animal, cow, dog, puppy)
         // to the ArrayList, in any order, using the "add" ArrayList method.
-
+        ArrayList<Animal> animals = new ArrayList<>();
+        animals.add(animal);
+        animals.add(cow);
+        animals.add(dog);
+        animals.add(puppy);
 
 
         // Exercise 2: use an ENHANCED for loop to loop through the
         // arraylist and call the talk() method on each object.
-
+        for (Animal animal1 : animals) {
+            animal1.talk();
+        }
 
 
         // Exercise 3: use a standard INDEX-BASED for loop to again
         // call the talk() method on each object.
-
+        for (int i = 0; i < animals.size(); i++) {
+            animals.get(i).talk();
+        }
 
 
         // Exercise 4: same as Exercise 1, except use an array of type Animal.
-
+        Animal[] animalsArr = {animal, cow, dog, puppy};
 
 
 
@@ -48,7 +59,28 @@ public class Main {
         // to call the fetch() method on each object instead of talk().
         // does the code compile when you do this?  if not, why not?
         // can you figure out a way to get it to compile and run?
+        for (Animal animal1 : animals) {
+            animal1.fetch();
+        }
 
+        for (int i = 0; i < animals.size(); i++) {
+            animals.get(i).fetch();
+        }
+         */
+
+        Animal animal2 = new Animal("some animal");
+        Cow cow2 = new Cow("Mr. Moo Cow");
+        Dog dog2 = new Dog("Fido");
+        Puppy puppy2 = new Puppy("Lil Rascal");
+        Vet amySmith = new Vet("Amy Smith");
+        amySmith.addClient(animal2); // not a client yet
+        amySmith.addClient(cow2);    // not a client yet
+        amySmith.addClient(dog2);    // not a client yet
+        amySmith.addClient(puppy2);  // not a client yet
+        amySmith.addClient(animal2); // ALREADY A CLIENT
+        amySmith.addClient(cow2);    // ALREADY A CLIENT
+        amySmith.addClient(dog2);    // ALREADY A CLIENT
+        amySmith.addClient(puppy2);  // ALREADY A CLIENT
 
     }
 }
